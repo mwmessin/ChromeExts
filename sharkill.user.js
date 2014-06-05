@@ -4,7 +4,7 @@
 // ==/UserScript==
 
 function $(selector) {
-  return document.querySelectorAll(selector)[0];
+  return document.querySelector(selector);
 }
 
 function $E(tag) {
@@ -18,7 +18,7 @@ $('head').appendChild(styles);
 setInterval(function () {
   var stillThere = $('a.submit');
   if (stillThere) stillThere.click();
-}, 2000)
+}, 2000);
 
 setTimeout(function() {
   $('.play-button').click()
